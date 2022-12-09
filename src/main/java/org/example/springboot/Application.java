@@ -2,7 +2,9 @@ package org.example.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing
 @SpringBootApplication // 해당 annotation 이 있는 곳부터 설정을 읽어감 (스프링 부트 자동 설정, bean 읽기, 생성 등)
 public class Application {
     public static void main(String[] args) {
