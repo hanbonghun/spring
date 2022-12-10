@@ -5,6 +5,16 @@
     <div class="row">
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+
+        {{#userName}}
+            Logged in as: <span id="user">{{userName}}</span>
+            <a href="/logout" class="btn-info active" role=""button>Logout</a>
+        {{/userName}}
+            {{^userName}}  <!-- 값이 존재하지 않는다면-->
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">
+                    Google Login
+                </a>
+            {{/userName}}
         </div>
     </div>
     <br>
